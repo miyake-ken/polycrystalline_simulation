@@ -16,7 +16,7 @@ from pathlib import Path
 
 import numpy as np
 
-from evosel2d import generate_nuclei, label_field, scan_thicknesses
+from evosel2d import generate_nuclei, growth_field, scan_thicknesses
 from evosel2d.plots import plot_scan
 
 FIELDS = [
@@ -41,6 +41,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--height-factor", type=float, default=1.6,
                    help="grid height / tmax (a corner-up crystal reaches sqrt(2) x thickness)")
     p.add_argument("--angles", choices=("continuous", "two-class"), default="continuous")
+    p.add_argument("--method", choices=("connected", "analytic"), default="connected",
+                   help="connected = growth with a connectivity constraint (physical)")
     p.add_argument("--tol", type=float, default=10.0, help="corner/face window in degrees")
     p.add_argument("--seeds", type=int, default=3, help="independent realisations to average")
     p.add_argument("--seed0", type=int, default=0, help="first seed")
@@ -66,7 +68,7 @@ def main() -> None:
         rng = np.random.default_rng(seed)
         cx, cy, phi = generate_nuclei(args.width, density=args.density, pad=2.0 * args.tmax + 2.0, rng=rng,
                                   orientation_mode=args.angles)
-        best, labels = label_field(xs, ys, cx, cy, phi)
+        best, labels = growth_field(xs, ys, cx, cy, phi, method=args.method, t_max=args.tmax)
         runs.append(
             scan_thicknesses(best, labels, phi, thicknesses, tol_deg=args.tol, pixel_size=1.0 / res)
         )
@@ -93,6 +95,7 @@ def main() -> None:
         "seed0": args.seed0,
         "model": "Wild, Herres & Koidl, J. Appl. Phys. 68, 973 (1990), Sec. IV (2-D, v=1)",
         "angles": args.angles,
+        "method": args.method,
         "height_factor": args.height_factor,
     }
 

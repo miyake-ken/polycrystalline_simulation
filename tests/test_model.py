@@ -8,6 +8,7 @@ import pytest
 from evosel2d import (
     arrival_time,
     generate_nuclei,
+    growth_field,
     label_field,
     mean_surface_width,
     orientation_classes,
@@ -131,3 +132,51 @@ def test_selection_grows_with_thickness():
     owner_1, _ = top_surface(best <= 1.0, labels)
     owner_20, _ = top_surface(best <= 20.0, labels)
     assert mean_surface_width(owner_20) > 1.5 * mean_surface_width(owner_1)
+
+
+def test_connected_growth_matches_the_closed_form_for_one_grain():
+    xs = (np.arange(160) + 0.5) / 8.0
+    ys = (np.arange(160) + 0.5) / 8.0
+    cx, cy, phi = np.array([10.0]), np.array([0.0]), np.array([0.4])
+    analytic, _ = label_field(xs, ys, cx, cy, phi)
+    grown, _ = growth_field(xs, ys, cx, cy, phi, t_max=12.0)
+    # the flood seeds the nucleus pixel at t = 0, so skip its one-pixel neighbourhood
+    compared = np.isfinite(grown) & (analytic >= 0.5)
+    assert compared.sum() > 1000
+    assert np.max(np.abs(grown[compared] - analytic[compared])) < 1e-3
+
+
+def test_connected_growth_leaves_no_floating_crystal():
+    """Each crystal must stay connected to its nucleus (no island above a neighbour)."""
+    width, res, t = 10.0, 8.0, 6.0
+    xs = (np.arange(int(width * res)) + 0.5) / res
+    ys = (np.arange(int(1.6 * t * res)) + 0.5) / res
+    cx, cy, phi = generate_nuclei(width, 1.0, 2.0 * t, np.random.default_rng(2))
+    time, labels = growth_field(xs, ys, cx, cy, phi, t_max=t)
+    film = time <= t
+    assert film.any()
+
+    def n_pieces(mask: np.ndarray) -> int:
+        seen = np.zeros_like(mask, dtype=bool)
+        pieces = 0
+        for j0, i0 in np.argwhere(mask):
+            if seen[j0, i0]:
+                continue
+            pieces += 1
+            stack = [(j0, i0)]
+            seen[j0, i0] = True
+            while stack:
+                j, i = stack.pop()
+                for dj in (-1, 0, 1):
+                    for di in (-1, 0, 1):
+                        jj, ii = j + dj, i + di
+                        if 0 <= jj < mask.shape[0] and 0 <= ii < mask.shape[1]:
+                            if mask[jj, ii] and not seen[jj, ii]:
+                                seen[jj, ii] = True
+                                stack.append((jj, ii))
+        return pieces
+
+    for label in np.unique(labels[film]):
+        region = (labels == label) & film
+        if region.sum() > 20:
+            assert n_pieces(region) == 1, f"crystal {label} is split into islands"

@@ -14,7 +14,7 @@ from pathlib import Path
 
 import numpy as np
 
-from evosel2d import area_fractions, generate_nuclei, label_field, mean_surface_width, top_surface
+from evosel2d import area_fractions, generate_nuclei, growth_field, mean_surface_width, top_surface
 from evosel2d.plots import plot_structure
 
 
@@ -27,6 +27,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--height-factor", type=float, default=1.6,
                    help="grid height / thickness (a corner-up crystal reaches sqrt(2) x thickness)")
     p.add_argument("--angles", choices=("continuous", "two-class"), default="continuous")
+    p.add_argument("--method", choices=("connected", "analytic"), default="connected",
+                   help="connected = growth with a connectivity constraint (physical); "
+                        "analytic = unconstrained first arrival (may show floating fragments)")
     p.add_argument("--tol", type=float, default=10.0, help="corner/face window in degrees")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--out", type=Path, default=Path("results/structure.png"))
@@ -44,7 +47,7 @@ def main() -> None:
     rng = np.random.default_rng(args.seed)
     cx, cy, phi = generate_nuclei(args.width, density=args.density, pad=2.0 * args.thickness, rng=rng,
                                   orientation_mode=args.angles)
-    best, labels = label_field(xs, ys, cx, cy, phi)
+    best, labels = growth_field(xs, ys, cx, cy, phi, method=args.method, t_max=args.thickness)
 
     mask = best <= args.thickness
     frac = area_fractions(mask, labels, phi, args.tol)
