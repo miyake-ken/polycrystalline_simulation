@@ -1,0 +1,148 @@
+{
+  "111": {
+    "64": {
+      "audit": {
+        "grown_voxels": 243183,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      },
+      "metrics": {
+        "mean_height": 9.230804443359375,
+        "rms_roughness": 0.32698096785723213,
+        "xy_coverage_fraction": 1.0,
+        "height_statistics_include_bare_substrate_as_zero": false,
+        "minimum_height": 8.046875,
+        "maximum_height": 9.765625,
+        "distinct_surface_grains": 32,
+        "projected_area_weighted_theta001_mean_deg": 45.82213552505114,
+        "projected_area_weighted_theta001_median_deg": 44.21166812965485,
+        "surface_fraction_within_15deg_001": 0.0,
+        "surface_fraction_within_15deg_111": 0.69775390625,
+        "initial_number_fraction_within_15deg_001": 0.08264462809917356,
+        "initial_number_fraction_within_15deg_111": 0.11570247933884298,
+        "surface_fraction_theta001_above_45deg": 0.448486328125
+      },
+      "section_components_not_touching_bottom_min4px": 12
+    },
+    "96": {
+      "audit": {
+        "grown_voxels": 846440,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      },
+      "metrics": {
+        "mean_height": 9.549990053530093,
+        "rms_roughness": 0.3083692495678961,
+        "xy_coverage_fraction": 1.0,
+        "height_statistics_include_bare_substrate_as_zero": false,
+        "minimum_height": 8.59375,
+        "maximum_height": 10.052083333333334,
+        "distinct_surface_grains": 34,
+        "projected_area_weighted_theta001_mean_deg": 45.38152154922347,
+        "projected_area_weighted_theta001_median_deg": 44.035580507258906,
+        "surface_fraction_within_15deg_001": 0.0,
+        "surface_fraction_within_15deg_111": 0.6528862847222222,
+        "initial_number_fraction_within_15deg_001": 0.08264462809917356,
+        "initial_number_fraction_within_15deg_111": 0.11570247933884298,
+        "surface_fraction_theta001_above_45deg": 0.4111328125
+      },
+      "section_components_not_touching_bottom_min4px": 15
+    },
+    "section_path": {
+      "grain_id": 79,
+      "voxel_count": 117,
+      "section_y": 5.052083333333334,
+      "path_y_min": 4.322916666666667,
+      "path_y_max": 5.052083333333334,
+      "initial_seed_z": 0.052083333333333336
+    },
+    "grid_relative_changes": {
+      "mean_height": 0.03457830919604629,
+      "rms_roughness": -0.056919882558615416,
+      "distinct_surface_grains": 0.0625
+    }
+  },
+  "100": {
+    "64": {
+      "audit": {
+        "grown_voxels": 398428,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      },
+      "metrics": {
+        "mean_height": 15.152969360351562,
+        "rms_roughness": 0.5738613253360827,
+        "xy_coverage_fraction": 1.0,
+        "height_statistics_include_bare_substrate_as_zero": false,
+        "minimum_height": 13.359375,
+        "maximum_height": 16.328125,
+        "distinct_surface_grains": 16,
+        "projected_area_weighted_theta001_mean_deg": 10.052884654222972,
+        "projected_area_weighted_theta001_median_deg": 10.284852933678483,
+        "surface_fraction_within_15deg_001": 0.858154296875,
+        "surface_fraction_within_15deg_111": 0.0,
+        "initial_number_fraction_within_15deg_001": 0.08264462809917356,
+        "initial_number_fraction_within_15deg_111": 0.11570247933884298,
+        "surface_fraction_theta001_above_45deg": 0.0
+      },
+      "section_components_not_touching_bottom_min4px": 14
+    },
+    "96": {
+      "audit": {
+        "grown_voxels": 1375161,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      },
+      "metrics": {
+        "mean_height": 15.526021321614584,
+        "rms_roughness": 0.5986507587018084,
+        "xy_coverage_fraction": 1.0,
+        "height_statistics_include_bare_substrate_as_zero": false,
+        "minimum_height": 13.697916666666668,
+        "maximum_height": 16.71875,
+        "distinct_surface_grains": 16,
+        "projected_area_weighted_theta001_mean_deg": 10.238082092166215,
+        "projected_area_weighted_theta001_median_deg": 10.284852933678483,
+        "surface_fraction_within_15deg_001": 0.8191189236111112,
+        "surface_fraction_within_15deg_111": 0.0,
+        "initial_number_fraction_within_15deg_001": 0.08264462809917356,
+        "initial_number_fraction_within_15deg_111": 0.11570247933884298,
+        "surface_fraction_theta001_above_45deg": 0.0
+      },
+      "section_components_not_touching_bottom_min4px": 16
+    },
+    "section_path": {
+      "grain_id": 104,
+      "voxel_count": 184,
+      "section_y": 5.052083333333334,
+      "path_y_min": 5.052083333333334,
+      "path_y_max": 6.927083333333334,
+      "initial_seed_z": 0.052083333333333336
+    },
+    "grid_relative_changes": {
+      "mean_height": 0.02461906655992646,
+      "rms_roughness": 0.04319760240195265,
+      "distinct_surface_grains": 0.0
+    }
+  }
+}

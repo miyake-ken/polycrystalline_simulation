@@ -1,0 +1,649 @@
+{
+  "method": "blocked support-Hamiltonian upwind approximation, not exact Smereka Eq7",
+  "isolated": [
+    {
+      "nx": 32,
+      "alpha": 1.1,
+      "cfl": 0.6,
+      "band_cells": 5,
+      "dx": 0.1875,
+      "end_time": 1.5,
+      "upper_facet_support": [
+        {
+          "index": 0,
+          "family": "001",
+          "measured_support": 1.1676192588216814,
+          "expected_support": 1.2670420169239451,
+          "facet_speed": 0.6350852961085884
+        },
+        {
+          "index": 2,
+          "family": "001",
+          "measured_support": 1.181586858231697,
+          "expected_support": 1.2670420169239451,
+          "facet_speed": 0.6350852961085884
+        },
+        {
+          "index": 7,
+          "family": "111",
+          "measured_support": 1.615528050508686,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 9,
+          "family": "111",
+          "measured_support": 1.5501682637314453,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 11,
+          "family": "111",
+          "measured_support": 1.4785654687951124,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 13,
+          "family": "111",
+          "measured_support": 1.5501591173818852,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        }
+      ],
+      "relative_symmetric_difference": 0.30869212022745735,
+      "analytic_voxel_volume": 8.114501953125,
+      "computed_volume": 5.662353515625,
+      "topology": {
+        "grown_voxels": 839,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      }
+    },
+    {
+      "nx": 48,
+      "alpha": 1.1,
+      "cfl": 0.6,
+      "band_cells": 5,
+      "dx": 0.125,
+      "end_time": 1.5,
+      "upper_facet_support": [
+        {
+          "index": 0,
+          "family": "001",
+          "measured_support": 1.2277264964147576,
+          "expected_support": 1.2670420169239451,
+          "facet_speed": 0.6350852961085884
+        },
+        {
+          "index": 2,
+          "family": "001",
+          "measured_support": 1.2299768756136276,
+          "expected_support": 1.2670420169239451,
+          "facet_speed": 0.6350852961085884
+        },
+        {
+          "index": 7,
+          "family": "111",
+          "measured_support": 1.7135472792717688,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 9,
+          "family": "111",
+          "measured_support": 1.6875663327868913,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 11,
+          "family": "111",
+          "measured_support": 1.6474203885621,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 13,
+          "family": "111",
+          "measured_support": 1.675507456078802,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        }
+      ],
+      "relative_symmetric_difference": 0.19629094412331408,
+      "analytic_voxel_volume": 8.109375,
+      "computed_volume": 6.724609375,
+      "topology": {
+        "grown_voxels": 3379,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      }
+    },
+    {
+      "nx": 64,
+      "alpha": 1.1,
+      "cfl": 0.6,
+      "band_cells": 5,
+      "dx": 0.09375,
+      "end_time": 1.5,
+      "upper_facet_support": [
+        {
+          "index": 0,
+          "family": "001",
+          "measured_support": 1.2503608927432126,
+          "expected_support": 1.2670420169239451,
+          "facet_speed": 0.6350852961085884
+        },
+        {
+          "index": 2,
+          "family": "001",
+          "measured_support": 1.2500967426136793,
+          "expected_support": 1.2670420169239451,
+          "facet_speed": 0.6350852961085884
+        },
+        {
+          "index": 7,
+          "family": "111",
+          "measured_support": 1.785419256042092,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 9,
+          "family": "111",
+          "measured_support": 1.765751463682441,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 11,
+          "family": "111",
+          "measured_support": 1.7198082164125366,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 13,
+          "family": "111",
+          "measured_support": 1.7555018777916869,
+          "expected_support": 1.9950737714880162,
+          "facet_speed": 1.0
+        }
+      ],
+      "relative_symmetric_difference": 0.14573170731707316,
+      "analytic_voxel_volume": 8.10791015625,
+      "computed_volume": 7.2213134765625,
+      "topology": {
+        "grown_voxels": 8615,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      }
+    },
+    {
+      "nx": 32,
+      "alpha": 2.9,
+      "cfl": 0.6,
+      "band_cells": 5,
+      "dx": 0.1875,
+      "end_time": 1.5,
+      "upper_facet_support": [
+        {
+          "index": 0,
+          "family": "001",
+          "measured_support": 2.444691494937528,
+          "expected_support": 3.0111766706516403,
+          "facet_speed": 1.6743157806499147
+        },
+        {
+          "index": 2,
+          "family": "001",
+          "measured_support": 2.3011203400576594,
+          "expected_support": 3.0111766706516403,
+          "facet_speed": 1.6743157806499147
+        },
+        {
+          "index": 7,
+          "family": "111",
+          "measured_support": 1.6411738569092824,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 9,
+          "family": "111",
+          "measured_support": 1.6508545546065712,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 11,
+          "family": "111",
+          "measured_support": 1.6381854069999786,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 13,
+          "family": "111",
+          "measured_support": 1.6487404501194531,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        }
+      ],
+      "relative_symmetric_difference": 0.284640522875817,
+      "analytic_voxel_volume": 20.1708984375,
+      "computed_volume": 14.468994140625,
+      "topology": {
+        "grown_voxels": 2180,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      }
+    },
+    {
+      "nx": 48,
+      "alpha": 2.9,
+      "cfl": 0.6,
+      "band_cells": 5,
+      "dx": 0.125,
+      "end_time": 1.5,
+      "upper_facet_support": [
+        {
+          "index": 0,
+          "family": "001",
+          "measured_support": 2.622633276100335,
+          "expected_support": 3.0111766706516403,
+          "facet_speed": 1.6743157806499147
+        },
+        {
+          "index": 2,
+          "family": "001",
+          "measured_support": 2.5135238501390713,
+          "expected_support": 3.0111766706516403,
+          "facet_speed": 1.6743157806499147
+        },
+        {
+          "index": 7,
+          "family": "111",
+          "measured_support": 1.7354349816253605,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 9,
+          "family": "111",
+          "measured_support": 1.7385299301518373,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 11,
+          "family": "111",
+          "measured_support": 1.726463728452616,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 13,
+          "family": "111",
+          "measured_support": 1.7355555528167206,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        }
+      ],
+      "relative_symmetric_difference": 0.15396548380841574,
+      "analytic_voxel_volume": 20.14453125,
+      "computed_volume": 17.3828125,
+      "topology": {
+        "grown_voxels": 8855,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      }
+    },
+    {
+      "nx": 64,
+      "alpha": 2.9,
+      "cfl": 0.6,
+      "band_cells": 5,
+      "dx": 0.09375,
+      "end_time": 1.5,
+      "upper_facet_support": [
+        {
+          "index": 0,
+          "family": "001",
+          "measured_support": 2.716258755191696,
+          "expected_support": 3.0111766706516403,
+          "facet_speed": 1.6743157806499147
+        },
+        {
+          "index": 2,
+          "family": "001",
+          "measured_support": 2.6138740057867333,
+          "expected_support": 3.0111766706516403,
+          "facet_speed": 1.6743157806499147
+        },
+        {
+          "index": 7,
+          "family": "111",
+          "measured_support": 1.7689332112300205,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 9,
+          "family": "111",
+          "measured_support": 1.7702471705106169,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 11,
+          "family": "111",
+          "measured_support": 1.7643780042938555,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        },
+        {
+          "index": 13,
+          "family": "111",
+          "measured_support": 1.7697957311426167,
+          "expected_support": 1.7984520634947367,
+          "facet_speed": 1.0
+        }
+      ],
+      "relative_symmetric_difference": 0.10103902478933159,
+      "analytic_voxel_volume": 20.14288330078125,
+      "computed_volume": 18.64984130859375,
+      "topology": {
+        "grown_voxels": 22523,
+        "invalid_predecessors": 0,
+        "noncausal_predecessors": 0,
+        "nonadjacent_predecessors": 0,
+        "changed_seed_voxels": 0,
+        "seed_components_not_touching_substrate": 0,
+        "disconnected_initial_seeds": 0,
+        "all_grown_voxels_connected_to_initial_seed": true
+      }
+    }
+  ],
+  "time_sensitivity": [
+    {
+      "alpha": 1.1,
+      "nx": 64,
+      "changed_occupied_fraction": 0.011866727521679598,
+      "cfl06_error": 0.14573170731707316,
+      "cfl03_error": 0.15426829268292683
+    },
+    {
+      "alpha": 2.9,
+      "nx": 64,
+      "changed_occupied_fraction": 0.020500132543960412,
+      "cfl06_error": 0.10103902478933159,
+      "cfl03_error": 0.11502904360631597
+    }
+  ],
+  "band_sensitivity": [
+    {
+      "alpha": 1.1,
+      "nx": 64,
+      "changed_occupied_fraction": 0.004564125969876769,
+      "band5_error": 0.14573170731707316,
+      "band8_error": 0.14878048780487804
+    },
+    {
+      "alpha": 2.9,
+      "nx": 64,
+      "changed_occupied_fraction": 0.009852434390739595,
+      "band5_error": 0.10103902478933159,
+      "band8_error": 0.10787040824674793
+    }
+  ],
+  "facet_rate_checks": [
+    {
+      "alpha": 1.1,
+      "nx": 32,
+      "family": "001",
+      "facet_index": 0,
+      "expected_speed": 0.6350852961085884,
+      "measured_speed": 0.5658298215923425,
+      "relative_error": -0.10904909142220866
+    },
+    {
+      "alpha": 1.1,
+      "nx": 32,
+      "family": "001",
+      "facet_index": 2,
+      "expected_speed": 0.6350852961085884,
+      "measured_speed": 0.6092411756535743,
+      "relative_error": -0.040693936095467835
+    },
+    {
+      "alpha": 1.1,
+      "nx": 32,
+      "family": "111",
+      "facet_index": 7,
+      "expected_speed": 1.0,
+      "measured_speed": 0.8718920209773721,
+      "relative_error": -0.12810797902262794
+    },
+    {
+      "alpha": 1.1,
+      "nx": 32,
+      "family": "111",
+      "facet_index": 9,
+      "expected_speed": 1.0,
+      "measured_speed": 0.8419341615119604,
+      "relative_error": -0.15806583848803957
+    },
+    {
+      "alpha": 1.1,
+      "nx": 32,
+      "family": "111",
+      "facet_index": 11,
+      "expected_speed": 1.0,
+      "measured_speed": 0.74192503575995,
+      "relative_error": -0.25807496424005005
+    },
+    {
+      "alpha": 1.1,
+      "nx": 32,
+      "family": "111",
+      "facet_index": 13,
+      "expected_speed": 1.0,
+      "measured_speed": 0.8524988213704644,
+      "relative_error": -0.1475011786295356
+    },
+    {
+      "alpha": 1.1,
+      "nx": 64,
+      "family": "001",
+      "facet_index": 0,
+      "expected_speed": 0.6350852961085884,
+      "measured_speed": 0.6219185216177112,
+      "relative_error": -0.02073229308181925
+    },
+    {
+      "alpha": 1.1,
+      "nx": 64,
+      "family": "001",
+      "facet_index": 2,
+      "expected_speed": 0.6350852961085884,
+      "measured_speed": 0.6254625652130908,
+      "relative_error": -0.015151871653240528
+    },
+    {
+      "alpha": 1.1,
+      "nx": 64,
+      "family": "111",
+      "facet_index": 7,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9328583206807902,
+      "relative_error": -0.06714167931920978
+    },
+    {
+      "alpha": 1.1,
+      "nx": 64,
+      "family": "111",
+      "facet_index": 9,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9160832915514486,
+      "relative_error": -0.08391670844855137
+    },
+    {
+      "alpha": 1.1,
+      "nx": 64,
+      "family": "111",
+      "facet_index": 11,
+      "expected_speed": 1.0,
+      "measured_speed": 0.937576411310741,
+      "relative_error": -0.06242358868925901
+    },
+    {
+      "alpha": 1.1,
+      "nx": 64,
+      "family": "111",
+      "facet_index": 13,
+      "expected_speed": 1.0,
+      "measured_speed": 0.902436424865865,
+      "relative_error": -0.09756357513413505
+    },
+    {
+      "alpha": 2.9,
+      "nx": 32,
+      "family": "001",
+      "facet_index": 0,
+      "expected_speed": 1.6743157806499147,
+      "measured_speed": 1.4483587213555629,
+      "relative_error": -0.13495486449195546
+    },
+    {
+      "alpha": 2.9,
+      "nx": 32,
+      "family": "001",
+      "facet_index": 2,
+      "expected_speed": 1.6743157806499147,
+      "measured_speed": 1.3640160872396738,
+      "relative_error": -0.18532925329640784
+    },
+    {
+      "alpha": 2.9,
+      "nx": 32,
+      "family": "111",
+      "facet_index": 7,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9060864295115006,
+      "relative_error": -0.09391357048849935
+    },
+    {
+      "alpha": 2.9,
+      "nx": 32,
+      "family": "111",
+      "facet_index": 9,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9217064839191468,
+      "relative_error": -0.07829351608085322
+    },
+    {
+      "alpha": 2.9,
+      "nx": 32,
+      "family": "111",
+      "facet_index": 11,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9179594552619834,
+      "relative_error": -0.08204054473801659
+    },
+    {
+      "alpha": 2.9,
+      "nx": 32,
+      "family": "111",
+      "facet_index": 13,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9198573029313074,
+      "relative_error": -0.08014269706869259
+    },
+    {
+      "alpha": 2.9,
+      "nx": 64,
+      "family": "001",
+      "facet_index": 0,
+      "expected_speed": 1.6743157806499147,
+      "measured_speed": 1.5836100587403728,
+      "relative_error": -0.054174799615358676
+    },
+    {
+      "alpha": 2.9,
+      "nx": 64,
+      "family": "001",
+      "facet_index": 2,
+      "expected_speed": 1.6743157806499147,
+      "measured_speed": 1.5376727307114357,
+      "relative_error": -0.08161127758435067
+    },
+    {
+      "alpha": 2.9,
+      "nx": 64,
+      "family": "111",
+      "facet_index": 7,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9804386747995638,
+      "relative_error": -0.019561325200436186
+    },
+    {
+      "alpha": 2.9,
+      "nx": 64,
+      "family": "111",
+      "facet_index": 9,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9796950174068302,
+      "relative_error": -0.020304982593169818
+    },
+    {
+      "alpha": 2.9,
+      "nx": 64,
+      "family": "111",
+      "facet_index": 11,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9719760825812566,
+      "relative_error": -0.028023917418743438
+    },
+    {
+      "alpha": 2.9,
+      "nx": 64,
+      "family": "111",
+      "facet_index": 13,
+      "expected_speed": 1.0,
+      "measured_speed": 0.9823030052847571,
+      "relative_error": -0.017696994715242886
+    }
+  ],
+  "grid_error_decreases": {
+    "1.1": true,
+    "2.9": true
+  }
+}
