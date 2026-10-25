@@ -1,5 +1,8 @@
 # 3次元ファセット膜成長：モデルと検証範囲
 
+結果と検証の全体像は[図付き再現報告書](reproduction_report.md)を参照。
+本資料は成長則、パラメータ、実行方法を説明する。
+
 ## 目的と出典
 
 Smereka, Li, Russo and Srolovitz, *Simulation of faceted film growth in three dimensions:

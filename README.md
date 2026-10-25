@@ -1,5 +1,10 @@
 # Polycrystalline film growth simulations
 
+## ドキュメント
+
+- [図付き再現報告書：論文との対応・計算結果・検証・未達事項](docs/reproduction_report.md)
+- [3次元モデルの技術資料：成長則・パラメータ・実行方法](docs/faceted3d.md)
+
 ## 3次元ファセット成長（Smereka et al., 2005）
 
 [モデル・実行方法・検証範囲](docs/faceted3d.md)を参照。
