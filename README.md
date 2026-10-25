@@ -1,4 +1,18 @@
-# wild1990_evolutionary_selection
+# Polycrystalline film growth simulations
+
+## 3次元ファセット成長（Smereka et al., 2005）
+
+[モデル・実行方法・検証範囲](docs/faceted3d.md)を参照。
+{001}/{111} ファセット速度比を変え、XZ断面のIPF-Z図とXY表面高さ図を生成する。
+論文の kinetic Wulff 形に基づく**近似実装**であり、著者らの式(7)の完全な再実装や、
+査読者から提供された画像とのピクセル単位の一致を主張するものではない。
+
+## 2次元の予備実装（Wild et al., 1990）
+
+> 以下は既存の探索的結果。連結性の検査は、成長方程式・境界条件・数値収束の
+> 検証の代わりにはならない。領域外の核を窓端へ丸める既存処理も未修正である。
+> 既存の「厳密」「一致」という記述や数値を、
+> 検証済みの物理的再現として引用しないこと。3次元版は別のソルバを使用する。
 
 Wild, Herres & Koidl, *Texture formation in polycrystalline diamond films*,
 J. Appl. Phys. **68**, 973 (1990) — Sec. IV「Growth modeling」の 2 次元
@@ -134,3 +148,25 @@ results/                    実行済みの図と表
 
 Ch. Wild, N. Herres, P. Koidl, *J. Appl. Phys.* **68**, 973–978 (1990),
 doi:10.1063/1.346663（Zotero: `87EYA994`）。
+
+P. Smereka, X. Li, G. Russo, D. J. Srolovitz,
+*Simulation of faceted film growth in three dimensions: microstructure, morphology and texture*,
+*Acta Materialia* **53**(4), 1191–1204 (2005),
+[doi:10.1016/j.actamat.2004.11.013](https://doi.org/10.1016/j.actamat.2004.11.013)
+（Zotero: `H935PNAT`）。
+
+### 3次元モデルを実装・検証する際の基準
+
+- Smereka et al. の §3 は、粒ごとのレベルセット方程式と粒の重なりによる成長停止を用いる。
+  既存の2次元 `growth_field` はこの手法の実装ではない。連結性の検査だけでは、
+  論文の成長則との一致や数値収束を確認したことにはならない。
+- 成長速度比は `α = √3 V001 / V111`（式1）。`α ≤ 1` では立方体の成長形と
+  〈111〉繊維配向、`α ≥ 3` では八面体の成長形と〈001〉繊維配向が予測される。
+  表面のファセット指数 `{hkl}` と繊維配向 `〈hkl〉` は区別する。
+- §5・Fig. 9 は、3次元膜の2次元断面では、断面外でつながる粒が途中から現れたり
+  消えたりすることを説明している。断面内で基板につながらない領域をすべて誤りと
+  判定してはいけない。元の3次元粒IDと成長履歴を用いて検査する。
+- 成長時間 `t` と平均膜厚 `h(t)` は別の量である。平均膜厚・表面粗さ・水平断面の
+  平均粒径は Appendix A の定義に従って評価する。
+
+3次元版と比較図は準備中であり、上の2次元図表はこの追加論文の再現結果ではない。
